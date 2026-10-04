@@ -14,12 +14,7 @@ function Staff() {
         const {
             data: { user }
         } = await supabase.auth.getUser();
-        //temp
-        const {
-    data: { session }
-} = await supabase.auth.getSession();
-
-console.log("MANAGER TOKEN:", session?.access_token);//end of temp
+       
 
         if (!user) {
             window.location.href = "/admin";
